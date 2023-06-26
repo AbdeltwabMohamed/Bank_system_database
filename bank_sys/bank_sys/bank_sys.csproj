@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2F7D978-A5F9-4C05-95ED-CF326644C41D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>bank_sys</RootNamespace>
+    <AssemblyName>bank_sys</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Addbank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addbank.Designer.cs">
+      <DependentUpon>Addbank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addbranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addbranch.Designer.cs">
+      <DependentUpon>addbranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addcustomerbyem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addcustomerbyem.Designer.cs">
+      <DependentUpon>addcustomerbyem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin.Designer.cs">
+      <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bank_sysDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bank_sysDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bin\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bin\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="createaccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createaccount.Designer.cs">
+      <DependentUpon>createaccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employee.Designer.cs">
+      <DependentUpon>employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="operationofloancustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="operationofloancustomer.Designer.cs">
+      <DependentUpon>operationofloancustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operationofloanemployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operationofloanemployee.Designer.cs">
+      <DependentUpon>Operationofloanemployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="showcustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="showcustomers.Designer.cs">
+      <DependentUpon>showcustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="showloan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="showloan.Designer.cs">
+      <DependentUpon>showloan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="showloanandcustomerandemployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="showloanandcustomerandemployee.Designer.cs">
+      <DependentUpon>showloanandcustomerandemployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Showtable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Showtable.Designer.cs">
+      <DependentUpon>Showtable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Signup.Designer.cs">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sign_up_for_customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sign_up_for_customer.Designer.cs">
+      <DependentUpon>sign_up_for_customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sign_up_for_employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sign_up_for_employee.Designer.cs">
+      <DependentUpon>sign_up_for_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sql1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sql1.Designer.cs">
+      <DependentUpon>sql1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sql2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sql2.Designer.cs">
+      <DependentUpon>sql2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sql3cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sql3cs.Designer.cs">
+      <DependentUpon>sql3cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sql4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sql4.Designer.cs">
+      <DependentUpon>sql4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sql5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sql5.Designer.cs">
+      <DependentUpon>sql5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sql6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sql6.Designer.cs">
+      <DependentUpon>sql6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLQuery.Designer.cs">
+      <DependentUpon>SQLQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update.Designer.cs">
+      <DependentUpon>update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updatecustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updatecustomer.Designer.cs">
+      <DependentUpon>updatecustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateemployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateemployee.Designer.cs">
+      <DependentUpon>updateemployee.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Addbank.resx">
+      <DependentUpon>Addbank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addbranch.resx">
+      <DependentUpon>addbranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addcustomerbyem.resx">
+      <DependentUpon>addcustomerbyem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createaccount.resx">
+      <DependentUpon>createaccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee.resx">
+      <DependentUpon>employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operationofloancustomer.resx">
+      <DependentUpon>operationofloancustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operationofloanemployee.resx">
+      <DependentUpon>Operationofloanemployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="showcustomers.resx">
+      <DependentUpon>showcustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="showloan.resx">
+      <DependentUpon>showloan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="showloanandcustomerandemployee.resx">
+      <DependentUpon>showloanandcustomerandemployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Showtable.resx">
+      <DependentUpon>Showtable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Signup.resx">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sign_up_for_customer.resx">
+      <DependentUpon>sign_up_for_customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sign_up_for_employee.resx">
+      <DependentUpon>sign_up_for_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sql1.resx">
+      <DependentUpon>sql1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sql2.resx">
+      <DependentUpon>sql2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sql3cs.resx">
+      <DependentUpon>sql3cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sql4.resx">
+      <DependentUpon>sql4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sql5.resx">
+      <DependentUpon>sql5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sql6.resx">
+      <DependentUpon>sql6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLQuery.resx">
+      <DependentUpon>SQLQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update.resx">
+      <DependentUpon>update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updatecustomer.resx">
+      <DependentUpon>updatecustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateemployee.resx">
+      <DependentUpon>updateemployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Bank_sysDataSet.xsc">
+      <DependentUpon>Bank_sysDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bank_sysDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Bank_sysDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bank_sysDataSet.xss">
+      <DependentUpon>Bank_sysDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bin\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bin\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="bin\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bin\Debug\bank_sys.exe.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\bank_sys.exe" />
+    <Content Include="bin\Debug\bank_sys.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
